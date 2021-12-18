@@ -1,6 +1,7 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 
+import { UserPhoto } from '../UserPhoto';
 import { styles } from './styles';
 
 import LogoSvg from '../../assets/logo.svg';
@@ -10,7 +11,10 @@ export function Header() {
     <View style={styles.container}>
       <LogoSvg />
 
-      <Text>Sair</Text>
+      <TouchableOpacity>
+        <Text style={styles.logoutText}>Sair</Text>
+      </TouchableOpacity>
+      <UserPhoto imageUri="https://randomuser.me/api/portraits/women/44.jpg" />
     </View>
   );
 }
