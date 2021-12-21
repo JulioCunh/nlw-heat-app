@@ -11,10 +11,12 @@ export function Header() {
     <View style={styles.container}>
       <LogoSvg />
 
-      <TouchableOpacity>
-        <Text style={styles.logoutText}>Sair</Text>
-      </TouchableOpacity>
-      <UserPhoto imageUri="https://randomuser.me/api/portraits/women/44.jpg" />
+      <View style={styles.logoutButton}>
+        <TouchableOpacity>
+          <Text style={styles.logoutText}>Sair</Text>
+        </TouchableOpacity>
+        <UserPhoto imageUri="https://randomuser.me/api/portraits/women/44.jpg" />
+      </View>
     </View>
   );
 }
