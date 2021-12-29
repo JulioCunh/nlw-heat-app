@@ -7,7 +7,8 @@ import {
 import AppLoading from 'expo-app-loading';
 import { StatusBar } from 'react-native';
 
-import { Home } from './src/Home';
+import { Home } from './src/screens/Home';
+import { AuthProvider } from './src/hooks/auth';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -21,8 +22,14 @@ export default function App() {
 
   return (
     <>
-      <StatusBar barStyle="light-content" />
-      <Home />
+      <AuthProvider>
+        <StatusBar
+          barStyle="light-content"
+          translucent
+          backgroundColor="transparent"
+        />
+        <Home />
+      </AuthProvider>
     </>
   );
 }
